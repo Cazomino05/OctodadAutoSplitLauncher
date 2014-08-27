@@ -298,7 +298,7 @@ namespace Octodad
                         pThread.Start();
 
                         // Set the previous level to this level
-                        PreviousLevel = Level;
+                        PreviousLevel = eLevelID.Unknown;
                         // set the first loading messageto now
                         lFirstLoadMessage = Environment.TickCount;
                         // reset our loading time to 0
@@ -331,12 +331,13 @@ namespace Octodad
                             // same level, don't go any further and restart the loop from the top
                             continue;
                         }
-                        // ignore main menu and credits
+                        // ignore main menu
+                        // Ignore home because it's skipped by credits
                         // amazon is ignored because it is skipped by going to hub
                         // deep sea is ignored because it is skipped by going into hub
                         // boat is ignored because it is skipped by going into hub
                         // Handle checking previous level such that it splits properly for hub
-                        if (Level == eLevelID.MainMenu || Level == eLevelID.OpeningCredits 
+                        if (Level == eLevelID.MainMenu || Level == eLevelID.Home 
                             || Level == eLevelID.Amazon || Level == eLevelID.Aqurium_Deep_Sea || Level == eLevelID.Boat
                             || ( Level == eLevelID.Aquarium_Hub && PreviousLevel != eLevelID.Amazon && PreviousLevel != eLevelID.Grocery && PreviousLevel != eLevelID.Kelp && PreviousLevel != eLevelID.Aqurium_Deep_Sea) )
                         {
