@@ -1,0 +1,8 @@
+/*.suo
+/bin/Debug/*.exe
+/bin/Debug
+/obj/Debug/Octodad.pdb
+/obj/Debug/Octodad.csprojResolveAssemblyReference.cache
+/obj/Debug/Octodad.csproj.FileListAbsolute.txt
+/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/obj/Debug
